@@ -1,0 +1,25 @@
+{
+  "name": "benchmark-uuid",
+  "version": "0.0.0-development",
+  "description": "Benchmark for UUID generation",
+  "main": "index.js",
+  "scripts": {
+    "start": "hyperfine --warmup 5 'node node.js' 'node browser.js' 'node uuid3.js' 'node uuid7.js' 'node uuid8.js' 'node uuid9.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2fd/benchmark-uuid.git"
+  },
+  "author": "2fd <i@2fd.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2fd/benchmark-uuid/issues"
+  },
+  "homepage": "https://github.com/2fd/benchmark-uuid#readme",
+  "dependencies": {
+    "uuid3": "npm:uuid@^3.4.0",
+    "uuid7": "npm:uuid@^7.0.3",
+    "uuid8": "npm:uuid@^8.3.2",
+    "uuid9": "npm:uuid@^9.0.0"
+  }
+}
