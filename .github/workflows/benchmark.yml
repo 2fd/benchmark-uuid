@@ -25,8 +25,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - name: installing
+      - name: downloading hyperfine
+        run: wget https://github.com/sharkdp/hyperfine/releases/download/v1.16.1/hyperfine_1.16.1_amd64.deb
+
+      - name: installing hyperfine
+        run: sudo dpkg -i hyperfine_1.16.1_amd64.deb
+
+      - name: installing dependencies
         run: npm ci
 
-      - name: running
+      - name: running benchmark
         run: npm start
