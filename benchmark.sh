@@ -1,4 +1,4 @@
-hyperfine --warmup 5 \
+hyperfine --warmup 5 --show-output \
   'node benchmark/node.js' \
   'node benchmark/browser.js' \
   'node benchmark/ulid1.js' \
